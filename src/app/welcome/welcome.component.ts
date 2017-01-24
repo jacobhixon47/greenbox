@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AngularFire } from 'angularfire2';
 
 @Component({
   selector: 'app-welcome',
@@ -6,5 +7,4 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
-
 }

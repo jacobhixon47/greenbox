@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BoxService } from '../box.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
+
 @Component({
   selector: 'app-marketplace',
   templateUrl: './marketplace.component.html',
@@ -12,8 +13,8 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class MarketplaceComponent implements OnInit {
   boxes: FirebaseListObservable<any[]>;
-
-  constructor(private router: Router, private boxService: BoxService){}
+  constructor(private router: Router, private boxService: BoxService, public af: AngularFire){}
+  auth = this.af.auth;
 
   ngOnInit() {
     this.boxes = this.boxService.getBoxes();
