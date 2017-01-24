@@ -9,8 +9,8 @@ export class BoxService {
     this.boxes = angularFire.database.list('boxes');
   }
 
-  getAlbums(){
-    return this.albums;
+  getBoxes(){
+    return this.boxes;
   }
 
 }
