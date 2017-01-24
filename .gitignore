@@ -4,6 +4,9 @@
 /dist
 /tmp
 
+# Firebase creds
+/src/app/api-keys.ts
+
 # dependencies
 /node_modules
 /bower_components

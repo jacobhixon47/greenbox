@@ -1,0 +1,17 @@
+{ "boxes": [{
+    "title": "BabyBud Greenbox",
+    "price": 20,
+    "description": "3 grams of flower, two 1-gram prerolls, and a pack of zig-zags papers.",
+    "id": "1"
+    }, {
+    "title": "MEDium Greenbox",
+    "price": 40,
+    "description": "5 grams of flower, 3 1-gram prerolls, .5 grams of concentrate, and a pack of zig-zags papers.",
+    "id": "2"
+    }, {
+    "title": "BigBud Greenbox",
+    "price": 55,
+    "description": "7 grams of flower, 5 1-gram prerolls, 3 grams of concentrate, and 2 packs of zig-zags papers.",
+    "id": "3"
+  }]
+}

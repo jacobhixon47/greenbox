@@ -1,5 +1,3 @@
-/*.jumbotron:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}*/
+.about {
+  background-color: #fff !important;
+}
