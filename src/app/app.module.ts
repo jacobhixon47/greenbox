@@ -13,6 +13,7 @@ import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { BoxDetailComponent } from './box-detail/box-detail.component';
 import { SignupComponent } from './signup/signup.component';
 import { masterFirebaseConfig } from './api-keys';
+import { LoginComponent } from './login/login.component';
 
 
 export const firebaseConfig = {
@@ -22,7 +23,7 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
-export const myFirebaseAuthConfig = {
+export const FirebaseGoogleAuthConfig = {
   provider: AuthProviders.Google,
   method: AuthMethods.Redirect
 };
@@ -34,7 +35,8 @@ export const myFirebaseAuthConfig = {
     AboutComponent,
     MarketplaceComponent,
     BoxDetailComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,7 @@ export const myFirebaseAuthConfig = {
     ReactiveFormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, FirebaseGoogleAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,13 +12,18 @@ export class SignupComponent {
 
   public signupForm = this.fb.group({
     email: [""],
-    password: [""]
+    password: [""],
+    confirmPassword: [""]
   });
   constructor(private router: Router, public fb: FormBuilder, public af: AngularFire) {}
   signup() {
-    this.af.auth.createUser(this.signupForm.value).catch(function(error) {
-      alert(error.message);
-    });
-    this.router.navigate(['store'])
+    if (this.signupForm.value.password === this.signupForm.value.confirmPassword) {
+      this.af.auth.createUser(this.signupForm.value).catch(function(error) {
+        alert(error.message);
+      });
+      this.router.navigate(['store']);
+    } else {
+      alert('Passwords do not match. Please try again.');
+    }
   }
 }
