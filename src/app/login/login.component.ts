@@ -15,7 +15,6 @@ export class LoginComponent {
   });
   constructor(private router: Router, public fb: FormBuilder, public af: AngularFire) {}
   login() {
-    console.log(this.loginForm.value);
     this.af.auth.login(this.loginForm.value).catch(function(error) {
       alert(error.message);
     });

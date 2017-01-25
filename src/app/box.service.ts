@@ -16,5 +16,4 @@ export class BoxService {
   getBoxById(boxId: string) {
     return this.angularFire.database.object('/boxes/' + boxId);
   }
-
 }

@@ -3,21 +3,24 @@ import { Box } from '../box.model';
 import { Router } from '@angular/router';
 import { BoxService } from '../box.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AuthService } from '../auth.service';
 
 
 @Component({
   selector: 'app-marketplace',
   templateUrl: './marketplace.component.html',
   styleUrls: ['./marketplace.component.css'],
-  providers: [BoxService]
+  providers: [BoxService, AuthService]
 })
 export class MarketplaceComponent implements OnInit {
   boxes: FirebaseListObservable<any[]>;
-  constructor(private router: Router, private boxService: BoxService, public af: AngularFire){}
-  auth = this.af.auth;
+  auth;
+  
+  constructor(private router: Router, private boxService: BoxService, private authService: AuthService, public af: AngularFire){}
 
   ngOnInit() {
     this.boxes = this.boxService.getBoxes();
+    this.auth = this.authService.getAuth();
   }
 
   goToBox(clickedBox) {
