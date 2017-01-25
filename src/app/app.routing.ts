@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { BoxDetailComponent } from './box-detail/box-detail.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
   {
@@ -19,8 +20,12 @@ const appRoutes: Routes = [
     component: MarketplaceComponent
   },
   {
-    path: 'albums/:id',
+    path: 'boxes/:id',
     component: BoxDetailComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
   }
 ];
 
