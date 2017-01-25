@@ -13,4 +13,8 @@ export class BoxService {
     return this.boxes;
   }
 
+  getBoxById(boxId: string) {
+    return this.angularFire.database.object('/boxes/' + boxId);
+  }
+
 }

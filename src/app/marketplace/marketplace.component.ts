@@ -20,7 +20,7 @@ export class MarketplaceComponent implements OnInit {
     this.boxes = this.boxService.getBoxes();
   }
 
-  goToBox(box: Box) {
-    this.router.navigate(['boxes', box.id]);
+  goToBox(clickedBox) {
+    this.router.navigate(['boxes', clickedBox.$key]);
   };
 }
