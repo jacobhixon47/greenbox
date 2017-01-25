@@ -11,7 +11,6 @@ export class AppComponent {
   constructor(private router: Router, public af: AngularFire) {
     this.af.auth.subscribe(auth => console.log(auth));
   }
-  auth = this.af.auth;
 
   login() {
     this.af.auth.login();

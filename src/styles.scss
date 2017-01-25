@@ -28,6 +28,7 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom: 2px #64d0a4 solid;
+  color: #fff;
 }
 
 .card-1-body {
@@ -36,4 +37,12 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom: 3px #ddd solid;
+}
+
+.navbar-brand {
+  border-right: 1px #eee solid;
+}
+
+.nav-list li {
+  border-left: 1px #eee solid;
 }
