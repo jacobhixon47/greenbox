@@ -15,7 +15,7 @@ import { AuthService } from '../auth.service';
 export class MarketplaceComponent implements OnInit {
   boxes: FirebaseListObservable<any[]>;
   auth;
-  
+
   constructor(private router: Router, private boxService: BoxService, private authService: AuthService, public af: AngularFire){}
 
   ngOnInit() {

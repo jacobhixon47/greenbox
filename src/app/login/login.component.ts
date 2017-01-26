@@ -18,10 +18,8 @@ export class LoginComponent {
     this.af.auth.login(this.loginForm.value).catch(function(error) {
       alert(error.message);
     });
-    this.router.navigate([''])
   }
   loginGoogle() {
     this.af.auth.login();
-    this.router.navigate([''])
   }
 }
